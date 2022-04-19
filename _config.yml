@@ -4,7 +4,7 @@ bio:                '코딩 블로그'
 description:        "Moon is a minimal, one column jekyll theme for your blog."
 reading_time:       true
 words_per_minute:   200
-logo:               'assets/img/logo.png'
+logo:               'assets/img/sha.jpg'
 background:         'assets/img/placeholder-big.jpg'
 tiled_bg:           false   # Set this true if you want to tile your background image, otherwise it will be covered
 locale:             en_US
@@ -17,7 +17,7 @@ highlighter:        rouge
 kramdown:
   auto_ids:         true
   footnote_nr:      1
-  entity_output:    as_char
+  entity_output:    as_charf
   toc_levels:       1..6
   enable_coderay:   false
 mathjax:            true
@@ -40,7 +40,7 @@ disqus_shortname:   taylantatli
 email:              0julie@naver.com
 #twitter:            username
 #facebook:           username
-github-url:         ttps://github.com/Juhye
+github-url:         https://github.com/Juhye
 #stackoverflow:     123456/username   from a "http://stackoverflow.com/users/123456/username" link
 #linkedin:          username
 #xing:              username
