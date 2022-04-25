@@ -1,0 +1,599 @@
+```python
+flag = {}
+if flag:
+    print('{flag} 는 참입니다.')
+print('단순 if 문 테스트 종료')    
+```
+
+
+```python
+# flag = {}
+flag = {1, 2, 3}
+
+if flag:
+    print(f'{flag} 는 참입니다.')
+    
+print('단순 if 문 테스트 종료')   
+```
+
+    {1, 2, 3} 는 참입니다.
+    단순 if 문 테스트 종료
+    
+
+
+```python
+# 변수값에 따라서 메세지 출력 
+num = 100
+
+if (num >= 20):
+    print(f'{num}은(는) 20보다 크거나 같다 ')
+    
+if (num < 20):
+    print(f'{num}은(는) 20보다 작다 ')
+```
+
+    100은(는) 20보다 크거나 같다 
+    
+
+
+```python
+# 입력 숫자에 따라서 짝수, 홀수 출력 
+
+myNum = int(input('숫자를 입력하여주세요...'))
+
+if (myNum%2 == 0):
+    print(f'{myNum} 은(는) 짝수')
+
+if (myNum%2 != 0):
+    print(f'{myNum} 은(는) 홀수')
+```
+
+    숫자를 입력하여주세요...50
+    50 은(는) 짝수
+    
+
+
+```python
+n = int(input('숫자를 입력하여주세요...'))
+
+if(n % 3== 0 or n% 5 ==0):
+    print(f'{myNum} 은(는) 3의 배수 또는 5의 배수')
+else:
+    print(f'{myNum} 은(는) 3의 배수 또는 5의 배수가 아니다')
+```
+
+    숫자를 입력하여주세요...15
+    50 은(는) 3의 배수 또는 5의 배수
+    
+
+
+```python
+# 다중if문
+# alif 사용
+
+# 퀴즈
+
+n = int(input('나이를 입력하여주세요...'))
+
+if(n<=7):
+    print("영유아")
+elif(8<=n<=13):
+    print("초등학생")
+elif(14<=n<=16):
+    print("중학생")
+elif(17<=n<=19):
+    print("고등학생")
+else:
+    print("성인")
+```
+
+    나이를 입력하여주세요...15
+    중학생
+    
+
+
+```python
+# 퀴즈
+
+h = int(input('키를 입력하여주세요...')) * 0.01
+w = int(input('체중를 입력하여주세요...'))
+
+bmi = (w / (h * h))
+
+if(bmi >= 35):
+    print("고도비만")
+elif(30<=bmi):
+    print("중고도 비만")
+elif(25<=bmi):
+    print("경도 비만")
+elif(23<=bmi):
+    print("과체중")
+elif(18.5<=bmi):
+    print("정상")
+else:
+    print("저체중")
+```
+
+    키를 입력하여주세요...160
+    체중를 입력하여주세요...45
+    저체중
+    
+
+
+```python
+input_data = input('데이타 입력 ...')
+if input_data.isdigit():
+    print(f'{input_data} => 숫자이다.')
+    if int(input_data) == 0:
+        print('0이다')
+    else:
+        print('양수이다') 
+else:
+    print(f'{input_data} => 숫자가 아니다.')
+```
+
+    데이타 입력 ...5ㄴ65
+    5ㄴ65 => 숫자가 아니다.
+    
+
+
+```python
+input_data = input('데이타 입력 ...')
+
+if input_data.isdigit():
+    if int(input_data) == 0:
+        print('0이다')
+    else:
+        print("양수이다")
+else:
+    print(f'{input_data} => 숫자가 아니다.')
+```
+
+    데이타 입력 ...-77
+    -77 => 숫자가 아니다.
+    
+
+
+```python
+data = input()
+if data.isdigit():
+    print(f'{data}은/는 숫자이다.')
+    data = int(data)
+    if data == 0:
+        print('0이다.')
+    else:
+        print('양수이다.')
+else:
+    if data[0] == '-' and data[1:].isdigit():
+        print('음수이다.')
+    else:
+        print(f'{data}은/는 숫자가 아니다')
+```
+
+    -8
+    음수이다.
+    
+
+
+```python
+input_data = input('데이타 입력 ...')
+if input_data.isdigit():
+    if int(input_data) == 0:
+        print('0이다')
+    elif int(input_data) > 0:
+        print('양수이다')
+elif (input_data[0] == "-") and input_data[1:].isdigit() and (input_data[1] != '0'):
+    print("음수이다")
+else:
+    print(f'{input_data} => 숫자가 아니다.')
+```
+
+    데이타 입력 ...-99
+    음수이다
+    
+
+
+```python
+myList = [1 , 2, 3]
+
+100 in myList, 1 in myList
+```
+
+
+
+
+    (False, True)
+
+
+
+## if 문 + in/not in 연산자
+
+```
+if item in/not in 리스트|튜플|문자열|집합:
+    명령문
+    
+```
+
+
+```python
+blackpink = ['리사', '제니', '로제', '지수']
+
+member = input('member >> ')
+
+if member in blackpink:
+    print(f'\n {member} 은(는) 블랙핑크이다.')
+else:
+    print(f'\n {member} 은(는) 블랙핑크가 아니다.')
+```
+
+    member >> 지수
+    
+     지수 은(는) 블랙핑크이다.
+    
+
+
+```python
+#  1~10 까지 출력 
+
+cnt = 1 # 초기값 설정
+while(cnt <= 10):
+    print(cnt)
+    cnt += 1 # 증감명령어 
+
+print('while 테스트 종료')
+```
+
+    1
+    2
+    3
+    4
+    5
+    6
+    7
+    8
+    9
+    10
+    while 테스트 종료
+    
+
+
+```python
+#  1~10 까지 출력 
+
+cnt = 1 # 초기값 설정
+while(cnt <= 10):
+    print(cnt, '=> Hello world')
+    cnt += 1 # 증감명령어 
+
+print('while 테스트 종료')
+```
+
+    1 => Hello world
+    2 => Hello world
+    3 => Hello world
+    4 => Hello world
+    5 => Hello world
+    6 => Hello world
+    7 => Hello world
+    8 => Hello world
+    9 => Hello world
+    10 => Hello world
+    while 테스트 종료
+    
+
+
+```python
+#  10 ~ 1 까지 출력 
+
+cnt = 10 # 초기값 설정
+while (cnt > 0):
+    print(cnt, end = ' ')
+    cnt -= 1 # 증감명령어 
+
+print('\n while 테스트 종료')
+
+```
+
+    10 9 8 7 6 5 4 3 2 1 
+     while 테스트 종료
+    
+
+
+```python
+#  1~50 까지 짝수만 출력 
+
+cnt = 2 # 초기값 설정
+while (cnt <= 50):
+    print(cnt, end = ' ')
+    cnt += 2 # 증감명령어 
+
+print('\n while 테스트 종료')
+```
+
+    2 4 6 8 10 12 14 16 18 20 22 24 26 28 30 32 34 36 38 40 42 44 46 48 50 
+     while 테스트 종료
+    
+
+
+```python
+#  1~100까지 합
+sum = 0
+cnt = 1 # 초기값 설정
+while (cnt <= 100):
+    cnt += 1 # 증감명령어 
+    sum += cnt
+
+print(f'총 합은 {sum}입니다')
+```
+
+    총 합은 5150입니다
+    
+
+
+```python
+# 구구단
+
+n = int(input('출력할 구구단의 숫자를 입력하세요:\t'))
+
+cnt = 1
+
+print(f'{n}단 출력')
+
+while(cnt < 10):
+    print(f'{n} * {cnt} = {n * cnt}')
+    cnt += 1
+```
+
+    출력할 구구단의 숫자를 입력하세요:	7
+    7단 출력
+    7 * 1 = 7
+    7 * 2 = 14
+    7 * 3 = 21
+    7 * 4 = 28
+    7 * 5 = 35
+    7 * 6 = 42
+    7 * 7 = 49
+    7 * 8 = 56
+    7 * 9 = 63
+    
+
+
+```python
+# 퀴즈 별찍기1
+cnt = 1
+while(cnt <= 5):
+    print("*"*cnt)
+    cnt+=1
+```
+
+    *
+    **
+    ***
+    ****
+    *****
+    
+
+
+```python
+# 퀴즈 별찍기2
+cnt = 1
+while(cnt <= 5):
+    print("*" *(6-cnt))
+    cnt+=1
+
+```
+
+    *****
+    ****
+    ***
+    **
+    *
+    
+
+
+```python
+n = int(input('리스트 길이를 입력하세요:\t'))
+list_1=[]
+while(n):
+    s = input('단어를 입력하세요:\t')
+    if(s[0] == 'a'):
+        list_1.append(s)
+        n -=1
+
+list_1
+```
+
+    리스트 길이를 입력하세요:	1
+    단어를 입력하세요:	apple
+    
+
+
+
+
+    ['apple']
+
+
+
+
+```python
+# 1~100 사이의 숫자중에서 3의 배수이거나 5의 배수를 출력하여라 
+
+cnt = 1
+while cnt<=100:
+    if (cnt%3 == 0) or (cnt%5 == 0):
+        print(cnt, end=' ')
+    cnt += 1
+```
+
+    3 5 6 9 10 12 15 18 20 21 24 25 27 30 33 35 36 39 40 42 45 48 50 51 54 55 57 60 63 65 66 69 70 72 75 78 80 81 84 85 87 90 93 95 96 99 100 
+
+
+```python
+# 1~100 사이의 숫자중에서 3의 배수이거나 5의 배수로 구성된 리스트를 생성하여라 
+
+cnt = 1
+result_list = []
+while cnt<=100:
+    if (cnt%3 == 0) or (cnt%5 == 0):
+        result_list.append(cnt)
+        
+    cnt += 1
+
+print(f'3의 배수이거나 5의 배수의 갯수 => {len(result_list)}')
+print(result_list)
+```
+
+    3의 배수이거나 5의 배수의 갯수 => 47
+    [3, 5, 6, 9, 10, 12, 15, 18, 20, 21, 24, 25, 27, 30, 33, 35, 36, 39, 40, 42, 45, 48, 50, 51, 54, 55, 57, 60, 63, 65, 66, 69, 70, 72, 75, 78, 80, 81, 84, 85, 87, 90, 93, 95, 96, 99, 100]
+    
+
+
+```python
+# 퀴즈3
+txt = 'ABCDEFG'
+n = len(txt)
+i = 0
+while(i < n):
+    print(" "*i + txt[i])
+    i += 1
+```
+
+    A
+     B
+      C
+       D
+        E
+         F
+          G
+    
+
+
+```python
+# 퀴즈
+
+myNumList = [100, 55, 50,30,25,10,67,88,45]
+n = len(myNumList)
+sum_1 = 0
+i = 0
+while(i<n):
+    sum_1 += myNumList[i]
+    i += 1
+    
+print(f'myNumList의 평균은 {round(sum_1 / n,2)} 입니다')
+
+i = 0
+bigList = []
+while(i < n):
+  if(sum_1/n < myNumList[i]):
+    bigList.append(myNumList[i])
+  i += 1
+
+print(f'평균보다 큰 값은 {bigList}')
+```
+
+    myNumList의 평균은 52.22 입니다
+    평균보다 큰 값은 [100, 55, 67, 88]
+    
+
+
+```python
+i = 2
+while(i < 10):
+  print("="* 10)
+  j = 1
+  while(j < 10):
+    print(f'{i} x {j} = {i * j}')
+    j += 1
+  i += 1
+  print("="* 10)
+```
+
+    ==========
+    2 x 1 = 2
+    2 x 2 = 4
+    2 x 3 = 6
+    2 x 4 = 8
+    2 x 5 = 10
+    2 x 6 = 12
+    2 x 7 = 14
+    2 x 8 = 16
+    2 x 9 = 18
+    ==========
+    ==========
+    3 x 1 = 3
+    3 x 2 = 6
+    3 x 3 = 9
+    3 x 4 = 12
+    3 x 5 = 15
+    3 x 6 = 18
+    3 x 7 = 21
+    3 x 8 = 24
+    3 x 9 = 27
+    ==========
+    ==========
+    4 x 1 = 4
+    4 x 2 = 8
+    4 x 3 = 12
+    4 x 4 = 16
+    4 x 5 = 20
+    4 x 6 = 24
+    4 x 7 = 28
+    4 x 8 = 32
+    4 x 9 = 36
+    ==========
+    ==========
+    5 x 1 = 5
+    5 x 2 = 10
+    5 x 3 = 15
+    5 x 4 = 20
+    5 x 5 = 25
+    5 x 6 = 30
+    5 x 7 = 35
+    5 x 8 = 40
+    5 x 9 = 45
+    ==========
+    ==========
+    6 x 1 = 6
+    6 x 2 = 12
+    6 x 3 = 18
+    6 x 4 = 24
+    6 x 5 = 30
+    6 x 6 = 36
+    6 x 7 = 42
+    6 x 8 = 48
+    6 x 9 = 54
+    ==========
+    ==========
+    7 x 1 = 7
+    7 x 2 = 14
+    7 x 3 = 21
+    7 x 4 = 28
+    7 x 5 = 35
+    7 x 6 = 42
+    7 x 7 = 49
+    7 x 8 = 56
+    7 x 9 = 63
+    ==========
+    ==========
+    8 x 1 = 8
+    8 x 2 = 16
+    8 x 3 = 24
+    8 x 4 = 32
+    8 x 5 = 40
+    8 x 6 = 48
+    8 x 7 = 56
+    8 x 8 = 64
+    8 x 9 = 72
+    ==========
+    ==========
+    9 x 1 = 9
+    9 x 2 = 18
+    9 x 3 = 27
+    9 x 4 = 36
+    9 x 5 = 45
+    9 x 6 = 54
+    9 x 7 = 63
+    9 x 8 = 72
+    9 x 9 = 81
+    ==========
+    
